@@ -1,0 +1,54 @@
+name: wink_merchant
+description: "Application de gestion de stock pour les partenaires Wink Express."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.10.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # --- AJOUT INDISPENSABLE POUR LA LOCALISATION ---
+  flutter_localizations:
+    sdk: flutter
+  # -----------------------------------------------
+
+  cupertino_icons: ^1.0.8
+
+  # --- RÉSEAU & AUTHENTIFICATION ---
+  dio: ^5.3.0                     
+  flutter_secure_storage: ^9.0.0  
+
+  # --- GESTION D'ÉTAT ---
+  provider: ^6.0.5                
+
+  # --- UTILITAIRES ---
+  shared_preferences: ^2.2.0      
+  intl: ^0.20.2                   
+  path_provider: ^2.1.1           
+
+  # --- UI & DESIGN ---
+  google_fonts: ^6.1.0            
+
+  # --- GESTION DES IMAGES (CAMÉRA & COMPRESSION) ---
+  image_picker: ^1.0.4            
+  flutter_image_compress: ^2.1.0  
+
+  # --- BASE DE DONNÉES LOCALE ---
+  sqflite: ^2.3.0
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  # Assets (Images)
+  #assets:
+    #- assets/images/
