@@ -1,0 +1,56 @@
+name: wink_merchant
+description: Application mobile pour les partenaires marchands Wink Express.
+publish_to: 'none' # Empêche la publication accidentelle sur pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # --- LOCALISATION ---
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+
+  # --- UI & DESIGN ---
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.1.0 # AJOUTÉ : Requis par wink_theme.dart
+  lottie: ^3.1.0       # Pour l'écran de lancement (Splash)
+
+  # --- LOGIQUE & RÉSEAU ---
+  provider: ^6.1.1     # Gestion d'état
+  http: ^1.2.0         # Utilisé par StockProvider
+  dio: ^5.4.0          # AJOUTÉ : Requis par AuthService et ApiService
+  web_socket_channel: ^3.0.0 # AJOUTÉ : Pour le chat/WebSocket
+
+  # --- STOCKAGE & BDD ---
+  shared_preferences: ^2.2.2      # Stockage simple
+  flutter_secure_storage: ^9.0.0  # AJOUTÉ : Stockage sécurisé du Token
+  sqflite: ^2.3.0                 # AJOUTÉ : Base de données locale SQL
+  path: ^1.8.3                    # AJOUTÉ : Gestion des chemins pour sqflite
+  path_provider: ^2.1.2           # Chemins de fichiers système
+
+  # --- MÉDIAS & FICHIERS ---
+  image_picker: ^1.0.7            # Prendre des photos
+  flutter_image_compress: ^2.1.0  # AJOUTÉ : Compresser les images avant envoi
+  
+  # --- PDF & IMPRESSION ---
+  pdf: ^3.10.7
+  printing: ^5.11.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # --- ASSETS ---
+  assets:
+    - assets/images/logo.png
+    - assets/animations/splash.json
